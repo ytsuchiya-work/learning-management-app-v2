@@ -1,0 +1,31 @@
+command:
+  - python
+  - server.py
+
+env:
+  - name: GENIE_SPACE_ID
+    value: "01f1c1250315122cac0d9bd97f5ba170"
+  - name: WAREHOUSE_ID
+    value: "e351c2d1b16eae95"
+  - name: CATALOG_NAME
+    value: "classic_stable_ytcy_catalog"
+  - name: SCHEMA_NAME
+    value: "learning_management"
+  - name: SERVING_ENDPOINT
+    value: "databricks-claude-sonnet-5-5"
+  - name: MODEL_SERVICE
+    value: "classic_stable_ytcy_catalog.learning_management.my_service_opus_5_5"
+
+resources:
+  - name: sql-warehouse
+    sql_warehouse:
+      id: "e351c2d1b16eae95"
+      permission: CAN_USE
+  - name: genie-space
+    genie_space:
+      id: "01f1c1250315122cac0d9bd97f5ba170"
+      permission: CAN_RUN
+  - name: serving-endpoint
+    serving_endpoint:
+      name: "databricks-claude-sonnet-5-5"
+      permission: CAN_QUERY

@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ── learning-management-app-v2 ──
+node_modules/
+client/dist/
+.deploy/
+.databricks/
+.claude/
+.playwright-mcp/
+.DS_Store
+*.tsbuildinfo
